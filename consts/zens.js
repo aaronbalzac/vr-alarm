@@ -6,7 +6,7 @@ const zens = [
         text: "I'm feeling beachy keen",
     },
     {   id: 2,
-        mantra: "Breathe in peace, breathe out bullshirt",
+        mantra: "Breathe in peace, breathe out negativity",
         image: "images/horseshoe_bend.jpg",
         audio: "sounds/birds.mp3",
         text: "Ain't no mountain high enough",
