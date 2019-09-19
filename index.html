@@ -1,25 +1,60 @@
+<!DOCTYPE html>
+
 <html>
   <head>
-    <title>MeditationApp</title>
-    <style>body { margin: 0; }</style>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+      VR Alarm Clock
+    </title>
+    <link href="js-alarm-clock.css" rel="stylesheet">
+    <script src="js-alarm-clock.js"></script>
   </head>
   <body>
-    <div id="container" />
-    <!-- When you"re ready to deploy your app, update this line to point to your compiled client.bundle.js -->
-    <script src="./client.bundle?platform=vr"></script>
-    <script>
-      // Initialize the React VR application
-      React360.init(
-        // When you"re ready to deploy your app, update this line to point to
-        // your compiled index.bundle.js
-        "index.bundle?platform=vr&dev=true",
-        document.getElementById("container"),
-        {
-          assetRoot: "static_assets/",
-        }
-      );
-    </script>
+  	<div id="block">
+   
+    <div id="ctime">
+     <div id="block">
+      <div class="square">
+        <div class="digits" id="chr">00</div>
+        </div>
+      </div>
+      <div id="block">
+      <div class="square">
+        <div class="digits" id="cmin">00</div>
+        </div>
+      </div>
+      <div id="block">
+      <div class="square">
+        <div class="digits" id="csec">00</div>
+        </div>
+      </div>
+    </div>
+</div>
+    <div id="block">
+    <div id="tpick">
+    	<div id="block">
+      <h1 class="header">
+        SET ALARM
+      </h1>
+  </div>
+  <div id="block">
+      <div id="tpick-h"></div>
+      <div id="tpick-m"></div>
+      <div id="tpick-s"></div>
+  </div>
+      
+      	<div id="block">
+        <input type="button" value="Set" id="tset"/></div>
+    <div id="block">  
+      <input type="button" value="Reset" id="treset" disabled/>
+      
+  </div>
+    </div>
+</div>
+    <!-- [ALARM SOUND] -->
+    <audio id="alarm-sound" loop>
+      <source src=".\alarm.mp3" type="audio/mp3">
+    </audio>
+    <p>
+  <iframe src=".\build\index.html"  width=100% height=750px></iframe></p>
   </body>
 </html>
-
